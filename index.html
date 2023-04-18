@@ -1,161 +1,226 @@
 <!DOCTYPE html>
-<!--I can add comment using this structure. 
-One very important thing is always start your html file this <!DOCTYPE html> as it tells the browser wich startd you are using-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imagination</title>
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      ;
+    />
+    <title>University Website</title>
   </head>
   <body>
-    <header>
-      <h1>Yerteshar eng yahshi qishloq!!🦈</h1>
-      <section>
-        <ol>
-          <li>This is a list item created inside of an order list</li>
-          <li>
-            If I give to any element and ID attribute I can
-            <a href="#jump">jump</a> to that part of the page using a tag with
-            href attribute
-          </li>
-        </ol>
-        <ul>
-          <li>This is a list item created inside of an unordered list</li>
-        </ul>
-      </section>
-    </header>
-    <section>
-      <div>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">COURSE</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" aria-hidden="true"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Worlds'Biggest University</h1>
         <p>
-          This is a content written using <em>p</em> tags and nested inside of a
-          section element. Now I want to add video using html video element.
+          Making website is now one of the easiest thing in the world. You just
+          need to leran HTML, CSS, <br />
+          Javascript and you are good to go.
         </p>
+        <a href="" class="hero-btn">Visit Us To know More</a>
       </div>
-      <video width="520" height="440" controls autoplay loop muted>
-        <source
-          src="https://vod-progressive.akamaized.net/exp=1681499190~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4640%2F31%2F798204134%2F3552956540.mp4~hmac=76178ca2f18a8188e280d03ce855b1f40465db36b0f15443e3396b4adb9e8184/vimeo-prod-skyfire-std-us/01/4640/31/798204134/3552956540.mp4?filename=file.mp4"
-        />
-        <source
-          src="https://player.vimeo.com/external/473807256.sd.mp4?s=6eb81efb12a35d0597b12c44138ce450676aeb06&profile_id=165&oauth2_token_id=57447761"
-        />
-        Your browser does not support HTML video.
-      </video>
-      <h2>I also know some more information about HTML</h2>
-      <p id="small-weight">
-        For example if you use br elemet it will create a linke break!<br />
-        How cool it is?
-      </p>
-      <p class="hello">
-        <strong>We should forget about html img tag!</strong><br /><br />
-        HTML image elements embed images in documents. The src attribute
-        contains the image URL and is mandatory. Img is an empty element meaning
-        it should not have a closing tag.
-      </p>
-      <figure>
-        <a
-          href="https://images.pexels.com/photos/10752156/pexels-photo-10752156.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-          target="_blank"
-          ><img
-            height="400px"
-            width="300px"
-            src="https://images.pexels.com/photos/10752156/pexels-photo-10752156.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-            alt="Girl looking to mirror"
-        /></a>
-        <figcaption>A girl looking to the window</figcaption>
-      </figure>
     </section>
-    <h2>There are also different sub-heading in HTML.</h2>
-    <h3>We have already used the h1 heading.</h3>
-    <h4>And there are 5 more from h2 - till h6.</h4>
-    <h5>
-      The heading elements are ordered from the highest level to the lowest
-      level.
-    </h5>
-    <hr />
-    <h6>H6 is the lowest lovel of headings.</h6>
-    <p>As mentioned the p element contains a block of text</p>
-    <p>
-      We can also use <span class="YW5">span element</span> to add some design
-      to separate pieces of text from a larger body of text
-    </p>
-    <h2>If you have noticed we did not add hyperlinks yet!</h2>
-    <p>
-      We can add <span class="YW6" id="jump">hyperlinks</span> using a tag with
-      href attribute. So let me add a link to a
-      <a
-        href="https://www.youtube.com/watch?v=dwY7w0k3j2Y&t=3669s"
-        target="_blank"
-        >YouTube video</a
-      >
-      where you can listen to great muisc! Don't forget to add target attribute
-      in order to take the user to a different tab!
-    </p>
-    <h2>Tabels</h2>
-    <p>
-      In HTML we can also create tables using tr and some other similar elements
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th>row 1:</th>
-          <th>col 1</th>
-          <th>col 2</th>
-        </tr>
-      </thead>
-      <tbody class="yellow">
-        <tr>
-          <th>row: 2</th>
-          <td>col 1</td>
-          <td>col 2</td>
-        </tr>
-        <tr>
-          <th colspan="2">I am BIG ROW</th>
-          <td>col 1</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>row 3:</th>
-          <td>col 1</td>
-          <td>col 2</td>
-        </tr>
-      </tfoot>
-    </table>
-    <br /><br /><br />
-    <div class="css-styles"></div>
-    <div class="top"></div>
-    <div class="bottom"></div>
-    <hr />
-    <br />
-    <div class="mother">
-      <div class="child">
-        <h1 class="grandchild">
-          scroll down ⬇️:)
-          <br />
-          If you want to see what is written in this text
-        </h1>
+
+    <!-- Course -->
+
+    <section class="course">
+      <h1>Courses We Offer</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias, a
+        provident non ea ad id fuga veniam cupiditate, fugit repudiandae.
+        Corrupti illo veritatis molestiae iusto iure, quisquam enim expedita.
+      </p>
+
+      <div class="row">
+        <div class="course-col">
+          <h3>Intermediate</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere,
+            nisi! Illo officia sint qui, dolorum hic accusantium, tempore
+            laudantium provident fuga, culpa dicta animi corporis asperiores non
+            quasi in ad?
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Degree</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere,
+            nisi! Illo officia sint qui, dolorum hic accusantium, tempore
+            laudantium provident fuga, culpa dicta animi corporis asperiores non
+            quasi in ad?
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Post Graduation</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere,
+            nisi! Illo officia sint qui, dolorum hic accusantium, tempore
+            laudantium provident fuga, culpa dicta animi corporis asperiores non
+            quasi in ad?
+          </p>
+        </div>
       </div>
-    </div>
-    <hr />
-    <br /><br /><br />
-    <section class="number">
-      <div class="one">One</div>
-      <div class="two">Two</div>
-      <div class="three">Three</div>
-      <div class="four">Four</div>
-      <div class="five">Five</div>
-      <div class="six">Six</div>
-      <div class="seven">Seven</div>
-      <div class="eight">Eight</div>
     </section>
+
+    <!-- campus -->
+
+    <section class="campus">
+      <h1>Our Global Campus</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="campus-col">
+          <img src="images/london.png" />
+          <div class="layer">
+            <h3>LONDON</h3>
+          </div>
+        </div>
+        <div class="campus-col">
+          <img src="images/newyork.png" />
+          <div class="layer">
+            <h3>NEW YORK</h3>
+          </div>
+        </div>
+        <div class="campus-col">
+          <img src="images/washington.png" />
+          <div class="layer">
+            <h3>WASHINGTON</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities -->
+
+    <section class="facilities">
+      <h1>Our Facilities</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="facilities-col">
+          <img src="images/library.png" />
+          <h3>World Class library</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="facilities-col">
+          <img src="images/basketball.png" />
+          <h3>Largest Playground</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="facilities-col">
+          <img src="images/cafeteria.png" />
+          <h3>Testy and Healthy food</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials -->
+
+    <section class="testimonials">
+      <h1>What Our Students Say</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="testimonial-col">
+          <img src="images/user1.jpg" />
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              necessitatibus repellendus sunt sequi placeat reprehenderit
+              tenetur aspernatur! Hic quidem, debitis doloremque soluta, in
+              assumenda eum architecto nobis, incidunt velit labore.
+            </p>
+            <h3>Christine Black</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+        </div>
+        <div class="testimonial-col">
+          <img src="images/user2.jpg" />
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              necessitatibus repellendus sunt sequi placeat reprehenderit
+              tenetur aspernatur! Hic quidem, debitis doloremque soluta, in
+              assumenda eum architecto nobis, incidunt velit labore.
+            </p>
+            <h3>David Gray</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call TO Action -->
+
+    <section class="cta">
+      <h1>
+        Enroll for our various online courses <br />
+        Anywhere From The World
+      </h1>
+      <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- Footer -->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+      veniam nemo recusandae laudantium vel <br />iusto ex excepturi libero
+      beatae inventore ducimus, natus quibusdam quas.
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made with <i class="fa fa-heart-o"></i> by Easy Tutorials</p>
+    </section>
+
+    <!-- Javascrip for TOggle Menu-->
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
-
