@@ -115,8 +115,5 @@ footer {
   overflow: scroll;
 }
 
-@media (min-width: 700) {
-  header {
-    flex-wrap: wrap;
-  }
+
 }
