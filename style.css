@@ -1,119 +1,403 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
-  overflow-x: hidden;
-  margin: 0;
-  min-height: 100vh;
+  background-color: rgb(255, 239, 225);
+  font-family: "Apercu", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  width: 90%;
+  margin: 0 auto;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
+/* Header Styling */
 
 header {
-  background: linear-gradient(green, lime);
-  min-height: 8vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 0;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 2;
-  overflow: scroll;
-}
-
-header::-webkit-scrollbar {
-  display: none;
-}
-
-header div ul {
+  left: 0;
+  z-index: 999;
   display: flex;
-  flex-direction: row;
-}
-
-header div ul li {
-  list-style: none;
-  background-color: transparent;
-  position: relative;
-}
-
-header div ul li a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  white-space: nowrap;
-  font-size: 1rem;
-  transition: font-size 0.4s;
-  border: 1px solid white;
-  border-radius: 3px;
-  padding: 2px;
-}
-
-header div ul li a:hover {
-  border-color: transparent;
-  color: black;
-  border-radius: 7px;
-  font-weight: 700;
-  padding: 3px;
-  font-size: 20px;
-  content: "";
-  display: block;
-  height: 100%;
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/784/972/983/clans-clash-coc-wallpaper-preview.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: background-color 0.4s, color 0.4s, font-size 0.4s;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 92vh;
-}
-
-.welcome-page {
-  background-image: url("https://w0.peakpx.com/wallpaper/346/545/HD-wallpaper-clash-of-clans-town-hall-14-clash-of-clans-games-2021-games-artstation.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 350px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  font-weight: bold;
-  position: sticky;
-  top: 0px;
+  background-color: white;
+  width: 100%;
+  border-bottom: 1px solid black;
 }
 
-span {
-  background: linear-gradient(
-    to right,
-    #f15a24,
-    #e0123c,
-    #c1277d,
-    #8c299e,
-    #463f71
-  );
+.right-side-nav-container {
+  width: 60%;
+}
+
+body header nav ul {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+body header nav ul li {
+  list-style-type: none;
+  margin-inline-end: 18px;
+}
+
+body header nav ul li .logo-text-decoration {
+  background: linear-gradient(90deg, darkblue, purple);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  border: 2px solid skyblue;
+  font-weight: bolder;
+}
+
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+}
+
+body header nav ul li a:hover {
+  color: rgb(42, 6, 226);
+}
+
+.left-side-icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 30%;
+}
+
+.left-side-icon-container div a {
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+.left-side-icon-container div a:hover {
+  background-color: rgb(238, 224, 214);
+  color: rgb(42, 6, 226);
+}
+
+.nav-button {
+  padding: 8px;
+  font-weight: bolder;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #1ed372;
+  color: black;
+}
+
+/* Main content styling  */
+
+main {
   position: relative;
-  top: -50px;
-  font-size: 34px;
+  top: 110px;
+  display: flex;
+  justify-content: space-between;
 }
 
-footer {
-  white-space: break-spaces;
-  overflow: scroll;
+.left-side-section {
+  width: 20%;
 }
 
+.left-side-section div {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
 
+.left-side-section div:hover {
+  color: rgb(42, 6, 226);
+}
+
+main div div a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.right-side-section {
+  width: 75%;
+}
+
+.small-main-header {
+  text-align: center;
+  font-size: 22px;
+  background-color: rgb(255, 206, 0);
+  padding: 20px;
+  border-radius: 1px;
+  position: relative;
+  cursor: pointer;
+}
+
+.small-main-header:hover {
+  color: rgb(42, 6, 226);
+}
+
+.small-main-header:hover span:first-child {
+  text-decoration: underline;
+}
+
+.trainagle-for-header {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 55px solid blue;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.circle-for-header {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(42, 6, 226);
+  position: absolute;
+  right: 70px;
+  top: 32px;
+}
+
+.white-color-for-circle {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.first-div-for-main {
+  color: rgb(42, 6, 226);
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.fa-arrow-right {
+  font-size: 15px;
+  margin-left: 1px;
+}
+
+/* Explore Catalog */
+
+/* This on for Languages */
+
+h1 {
+  margin: 25px 0;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.language-cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  margin-bottom: 40px;
+}
+
+.language-card-1,
+.language-card-2,
+.language-card-3 {
+  width: 31%;
+  height: 200px;
+  background: skyblue;
+  cursor: pointer;
+  border: 1px solid none;
+  border-radius: 5px;
+  transition: position, 0.2s linear;
+  position: relative;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.language-card-1:hover,
+.language-card-2:hover,
+.language-card-3:hover {
+  box-shadow: -5px 5px 0px 1px rgba(000, 000, 000, 0.7);
+  transform: translateX(5px) translateY(-5px);
+  border: none;
+}
+
+.text-for-card {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  background: linear-gradient(45deg, blue, purple);
+  border-radius: 4px;
+  padding: 20px;
+  width: 60%;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+br {
+  margin-bottom: 10px;
+}
+
+.background-figure-color-1 {
+  height: 100%;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+.small-flex-for-arraws {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  margin: 15px 0;
+}
+
+.left-and-right-arraw-container {
+  cursor: pointer;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  border: 2px solid rgba(112, 111, 111, 0.942);
+  font-size: 18px;
+  padding: 8px 10px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+/* This one for Career */
+
+.career-path-card-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.career-path-card {
+  width: 100%;
+  height: 320px;
+  background: skyblue;
+  cursor: pointer;
+  border: 1px solid none;
+  position: relative;
+  border-radius: 5px;
+  transition: position, 0.2s linear;
+  border: 1px solid black;
+  overflow: hidden;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.career-path-card:hover {
+  transform: translateX(5px) translateY(-5px);
+  border: none;
+}
+
+.empty-shadow-card {
+  width: 100%;
+  height: 320px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid black;
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  z-index: -1;
+  transition: position, 0.2s linear;
+}
+
+.special-hover-effect-fot-both-career-path-card {
+  width: 31%;
+  height: 320px;
+  position: relative;
+}
+
+.special-hover-effect-fot-both-career-path-card:hover .empty-shadow-card {
+  background-color: black;
+  border: none;
+  transform: translateX(1px) translateY(1px);
+}
+
+.little-header-for-progress {
+  background-color: rgb(255, 206, 0);
+  border-radius: 3px 3px 0 0;
+  height: 28px;
+  display: grid;
+  align-items: center;
+}
+
+.small-left-margin {
+  margin-left: 16px;
+}
+
+.little-header-for-carrier {
+  background-color: rgba(16, 14, 22, 0.984);
+  color: white;
+  border-radius: 3px 3px 0 0;
+  height: 28px;
+  display: grid;
+  align-items: center;
+}
+
+.big-text-for-career-path-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 14px 0px 8px 10px;
+}
+
+.small-follow-up-text-for-career-path-header {
+  margin-left: 10px;
+  line-height: 24px;
+  width: 90%;
+  font-size: 14px;
+}
+
+.course-info-design {
+  margin: 8px 0;
+  margin-left: 10px;
+  border-top: 1px dotted black;
+  width: 90%;
+  padding-top: 6px;
+  font-size: 14px;
+}
+
+.small-flex-for-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.less-bold {
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 1220px) {
+  .left-side-icon-container {
+    display: none;
+  }
+
+  .right-side-nav-container {
+    width: 100%;
+  }
+
+  .right-side-nav-container ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .right-side-nav-container ul {
+    width: 100%;
+  }
+
+  .left-side-section {
+    display: none;
+  }
+
+  .right-side-section {
+    width: 100%;
+  }
 }
