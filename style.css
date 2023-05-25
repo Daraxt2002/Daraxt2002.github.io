@@ -1,4 +1,4 @@
-*,
+/* *,
 ::after,
 ::before {
   box-sizing: border-box;
@@ -402,3 +402,4 @@ br {
     width: 100%;
   }
 }
+ */
